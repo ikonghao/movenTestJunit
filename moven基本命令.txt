@@ -1,0 +1,18 @@
+Maven
+Ant 
+gradle
+
+
+src Ô´´úÂë
+	-main
+		-javaÄ¿Â¼
+			-package
+	-test
+		-java
+			-package
+	resource
+
+ÃüÁî
+mvn compile --
+mvn test --±àÒë
+mvn package
