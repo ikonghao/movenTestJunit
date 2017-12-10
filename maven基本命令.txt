@@ -13,6 +13,9 @@ src 源代码
 	resource
 
 命令
-mvn compile --
-mvn test --编译
-mvn package
+mvn -v --查看版本
+mvn compile --编译项目
+mvn test --测试
+mvn package --打包项目
+mvn clean --删除target
+mvn install --安装jar包到本底仓库中
