@@ -3,7 +3,21 @@ Maven 依赖管理
 Ant 
 gradle
 
-目录结构
+--------------------------------------------------------------------------------------------------
+阿里Maven 镜像仓库
+<mirror>  
+      
+	<id>alimaven</id>  
+      
+	<name>aliyun maven</name>  
+      
+	<url>http://maven.aliyun.com/nexus/content/groups/public/</url>  
+      
+	<mirrorOf>central</mirrorOf>          
+    
+</mirror> 
+---------------------------------------------------------------------------------------------------
+Mave项目目录结构
 src 源代码
 	-main
 		-java目录
@@ -12,38 +26,40 @@ src 源代码
 		-java
 			-package
 	resource
+-----------------------------------------------------------------------------------------------------
 
-
-命令
+Mave 常用命令
 mvn -v --查看版本
 mvn compile --编译项目
 mvn test --测试
 mvn package --打包项目
 mvn clean --删除target
 mvn install --安装jar包到本底仓库中
-
-创建目录的梁总方式：
-
-----------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+创建目录的两总方式：
 mvn archetype:generate
-
 1.按照提示进行选择输入
     Define value for property 'groupId': com.imooc.maven03
     Define value for property 'artifactId': moaven03-service
     Define value for property 'version' 1.0-SNAPSHOT: : 1.0.0SNAPSHOT
     Define value for property 'package' com.imooc.maven03: : com.imooc.maven03.service
-
-2.
+2.一次构建完成，实例+注解说明
 mvn archetype:generate -DgroupId=com.imooc.maven04 -DartifactId=maven04-demo -Dversion=1.0.0SNAPSHOT -Dpackage=com.imooc.maven04.demo
-
 mvn archetype:generate 
 	-DgroupId=组织名，公司网址的反写+项目名
 	-DartifactId=项目名+模块名
 	-Dversion=颁布号
 	-Dpackage=代码所在的包名
-----------------------------------------------------------
-
-插件：
-archetype 用于创建符合Maven规定的目录骨架
-
+-------------------------------------------------------------------------------------------------------------
+Mave 常用插件说明：
+archetype 用于创建符合Maven规定的目录骨架 
 mvn archetype:generate
+--------------------------------------------------------------------------------------------------------------
+Maven仓库说明
+坐标
+	构件
+仓库
+	本地仓库和远程仓库
+本地仓库地址修改：localRepository 
+镜像仓库地址修改：mirror
+--------------------------------------------------------------------------------------------------------------
